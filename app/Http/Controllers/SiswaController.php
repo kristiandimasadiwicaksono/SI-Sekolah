@@ -9,4 +9,8 @@ class SiswaController extends Controller
     public function index() {
         return view('homepage.siswa.index');
     }
+
+    public function create() {
+        return view('homepage.siswa.create');
+    }
 }
