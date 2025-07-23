@@ -1,5 +1,5 @@
 <div>
-        <div class="-m-1.5 overflow-x-auto">
+    <div class="-m-1.5 overflow-x-auto">
       <div class="p-1.5 min-w-full inline-block align-middle">
         <div class="bg-white border border-gray-200 rounded-xl shadow-2xs overflow-hidden">
           <!-- Header -->
@@ -109,7 +109,7 @@
                     {{ $item->nis }}
                   </td>
                   <td class="text-center px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                    X IPA 1
+                    {{ $item->kelas->nama_kelas }}
                   </td>
                   <td class="items-center px-1 py-4 whitespace-nowrap text-sm text-gray-800">
                     <div class="flex flex-row justify-center text-center gap-x-2">

@@ -11,4 +11,8 @@ class Kelas extends Model
 
     protected $guarded = [];
     public $timestamps = false;
+
+    public function guru() {
+        return $this->belongsTo(Guru::class, 'id_guru');
+    }
 }
