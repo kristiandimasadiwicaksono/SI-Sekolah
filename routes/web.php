@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'index'])->name('homepage');
 Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
-route::get('/siswa/add', [SiswaController::class ,'create'])->name('siswa.create');
+route::get('/siswa/add', [SiswaController::class, 'create'])->name('siswa.create');
+route::post('/siswa/add/store', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/guru', [GuruController::class, 'index'])->name('guru.index');
 Route::get('/kelas', [KelasController::class, 'index'])->name('kelas.index');
