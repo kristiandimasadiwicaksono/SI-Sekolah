@@ -21,7 +21,7 @@
           </div>
           <div class="ms-3">
             <h3 id="hs-bordered-success-style-label" class="text-gray-800 font-semibold">
-              Successfully Added.
+              Successfull.
             </h3>
             <p class="text-sm text-gray-700 ">
               {{ session('success') }}

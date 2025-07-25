@@ -1,5 +1,5 @@
 <div>
-        <form method="POST" action="{{ route('guru.store') }}">
+    <form method="POST" action="{{ route('guru.store') }}">
         @csrf
       <!-- Section -->
       <div class="py-6 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">

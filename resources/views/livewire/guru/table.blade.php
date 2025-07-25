@@ -112,12 +112,16 @@
                     </td>
                     <td class="items-center px-1 py-4 whitespace-nowrap text-sm text-gray-800">
                         <div class="flex flex-row justify-center text-center gap-x-2">
-                        <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
+                        <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="{{ route('guru.edit', $item->id) }}">
                             Edit
                         </a>
-                        <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
+                        <form action="{{ route('guru.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin mengubah data ini?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium">
                             Hapus
-                        </a>
+                            </button>
+                        </form>
                         </div>
                     </td>
                     @endforeach

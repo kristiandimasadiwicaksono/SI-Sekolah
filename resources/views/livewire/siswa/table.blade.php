@@ -113,12 +113,16 @@
                   </td>
                   <td class="items-center px-1 py-4 whitespace-nowrap text-sm text-gray-800">
                     <div class="flex flex-row justify-center text-center gap-x-2">
-                      <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
+                      <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href=" {{ route ('siswa.edit', $item->id) }}">
                         Edit
                       </a>
-                      <a class="inline-flex items-center gap-x-1 text-sm text-red-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium" href="#">
-                        Hapus
-                      </a>
+                      <form action="{{ route('siswa.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin ingin mengubah data ini?')">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-sm text-red-600 hover:underline font-medium">
+                          Hapus
+                        </button>
+                      </form>
                     </div>
                   </td>
                 </tr>
@@ -131,7 +135,7 @@
           <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200">
             <div>
               <p class="text-sm text-gray-600">
-                <span class="font-semibold text-gray-800">12</span> results
+                <span class="font-semibold text-gray-800">{{ count($siswa) }}</span> results
               </p>
             </div>
 
