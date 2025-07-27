@@ -3,6 +3,7 @@
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\KelasController;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,4 @@ Route::get('/', [HomePageController::class, 'index'])->name('homepage');
 Route::resource('siswa', SiswaController::class);
 Route::resource('guru', GuruController::class);
 Route::resource('kelas', KelasController::class);
+Route::resource('login', loginController::class);

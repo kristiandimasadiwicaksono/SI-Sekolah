@@ -17,7 +17,7 @@
             NIP
         </label>
         <div class="mt-1 mb-2 space-y-3">
-          <input id="nip" name="nip" type="text" value="{{ old('nip') }}" class="py-1.5 sm:py-2 px-3 block w-full border border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Masukkan NIP" required>
+          <input id="nip" name="nip" type="text" pattern="[0-9]*" inputmode="numeric" maxlength="20" value="{{ old('nip') }}" class="py-1.5 sm:py-2 px-3 block w-full border border-gray-200 shadow-2xs sm:text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Masukkan NIP" required>
           @error('nip')
             <div class="!mt-1 text-xs text-red-500"> kelas sudah terdaftar </div>
           @enderror

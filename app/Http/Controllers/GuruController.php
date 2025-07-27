@@ -36,7 +36,7 @@ class GuruController extends Controller
         return view('homepage.guru.edit', compact('guru'));
     }
 
-    public function update (Request $request, $id) {
+    public function update(Request $request, $id) {
         $request->validate([
             'nama' => 'required|string|unique:guru,nama,' . $id,
             'nip' => 'required|numeric|unique:guru,nip,' . $id,
